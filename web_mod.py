@@ -73,10 +73,13 @@ def opendns_modification(just_uncheck_all):
 
 
 now = datetime.datetime.now()  # na serwerach heroku godzina przesunięta jest o 2 godziny do tyłu
+unlock_all = True
 
 while True:
     time.sleep(60)
-    if now.hour == 22:
-        opendns_modification(True)
-    elif now.hour == 5 and now.minutes >= 50:
-        opendns_modification(False)
+    if now.hour == 22 and unlock_all:
+        opendns_modification(unlock_all)
+        unlock_all = not unlock_all
+    elif now.hour == 5 and now.minutes >= 50 and not unlock_all:
+        opendns_modification(unlock_all)
+        unlock_all = not unlock_all
