@@ -1,1 +1,1 @@
-web: python web_mod.py
+worker: python web_mod.py
