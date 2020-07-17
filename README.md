@@ -45,7 +45,12 @@
 
   GOOGLE_CHROME_BIN      /app/.apt/usr/bin/google-chrome
 
-  chromedriver           /app/.chromedriver/bin/chromedriver
+  ------------- ONLY IF PROBLEM WITH CHROME VERSION -------------
+  
+  GOOGLE_CHROME_CHANNEL  beta
+  
+  --------------------- MAYBE IT WILL HELP ----------------------
+  
 </p>
 <br>
 <p>
@@ -54,6 +59,6 @@
 <br>
 <p>
   In loop at the and you can change block/unblock hours.
-  Here categories unlock at 22:00 (0:00 w Polsce) and block at 5:50.
+  Here categories unlock at 22:00 (0:00 w Polsce) and block at 5:50 (7:50 w Polsce).
   You can personalize it and make it more detail, because object 'now' has attributes like now.year, now.month, now.day,    now.hour, now.minute, now.second.
 </p>
