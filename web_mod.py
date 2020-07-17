@@ -40,6 +40,7 @@ def opendns_modification(just_uncheck_all):
 
     # GO TO SPECIFIC IP
     specific_ip_element = browser.find_element_by_xpath('//span[@class="Tips1"]//a[1]')
+    time.sleep(5)
     specific_ip_element.click()
 
     # CHOOSE CUSTOM CATEGORIES
@@ -71,15 +72,17 @@ def opendns_modification(just_uncheck_all):
     # QUIT
     browser.quit()
 
-
-now = datetime.datetime.now()  # na serwerach heroku godzina przesunięta jest o 2 godziny do tyłu
 unlock_all = True
 
 while True:
     time.sleep(60)
+    now = datetime.datetime.now()  # na serwerach heroku godzina przesunięta jest o 2 godziny do tyłu
+    print("Working... ", now.hour, ":", now.minute)
     if now.hour == 22 and unlock_all:
+        print("Unlocking... ", now.hour, ":", now.minute)
         opendns_modification(unlock_all)
         unlock_all = not unlock_all
-    elif now.hour == 5 and now.minutes >= 50 and not unlock_all:
+    elif now.hour == 5 and now.minute >= 50 and not unlock_all:
+        print("Locking... ", now.hour, ":", now.minute)
         opendns_modification(unlock_all)
         unlock_all = not unlock_all
