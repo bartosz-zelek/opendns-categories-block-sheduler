@@ -18,7 +18,7 @@
 
   $ git init
 
-  $ heroku git:remote -a thatsatest
+  $ heroku git:remote -a your_heroku_app_name
 
   $ heroku buildpacks:add heroku/python
 
