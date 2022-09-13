@@ -3,7 +3,7 @@
 <br>
 --- ENG ---
 
-<p>A program let you block und unblock specific pages categories about specific hours everyday. You can insert a code on e.g. Heroku.com (time on Heroku server can be different than yours) where changes will be insert. There is used Selenium module.</p>
+<p>A program let you block und unblock specific pages categories at specific hours everyday. You can insert a code on e.g. Heroku.com (time on Heroku server can be different than yours) where changes will be insert. There is used Selenium module.</p>
 
 
 <p>Download and install the Heroku CLI and GIT.</p>
