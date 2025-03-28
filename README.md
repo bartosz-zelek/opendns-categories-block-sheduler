@@ -1,8 +1,4 @@
 # opendns-categories-block-sheduler
-<p>Program pozwala na blokowanie i odblokowywanie konkretnych kategorii stron o określonych godzinach w ciągu dnia. Możliwe jest wstawienie kodu na np. Heroku.com (strefa czasowa 2 godziny do tyłu w PL) skąd będą wykonywane zmiany. Wykorzystano moduł Selenium.</p>
-<br>
---- ENG ---
-
 <p>A program let you block und unblock specific pages categories at specific hours everyday. You can insert a code on e.g. Heroku.com (time on Heroku server can be different than yours) where changes will be insert. There is used Selenium module.</p>
 
 
@@ -11,27 +7,18 @@
 <p>
   
   In CLI:
-
+```
   $ heroku login
-  
   $ cd my-project/
-
   $ git init
-
   $ heroku git:remote -a your_heroku_app_name
-
   $ heroku buildpacks:add heroku/python
-
   $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-google-chrome#selenium
-
   $ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-chromedriver
-
   $ git add .
-
   $ git commit -am "initial commit"
-
   $ git push heroku master
-
+```
 </p>
 <br>
 <p>
@@ -59,6 +46,6 @@
 <br>
 <p>
   In loop at the and you can change block/unblock hours.
-  Here categories unlock at 22:00 (0:00 w Polsce) and block at 5:50 (7:50 w Polsce).
+  Here categories unlock at 22:00 and block at 5:50.
   You can personalize it and make it more detail, because object 'now' has attributes like now.year, now.month, now.day,    now.hour, now.minute, now.second.
 </p>
